@@ -13,21 +13,19 @@ export default class AppList extends Component<Props> {
             <StyleProvider style={getTheme(material)}>
                 <List>
                     <ListItem style={styles.listItem}>
-                        <Left>
+                        <View style={{ paddingLeft: 15 }}>
                             <Text style={styles.date}>5 May,2019</Text>
-                        </Left>
-                        <Body>
+                        </View>
+                        <Body style={{ paddingLeft: 20 }}>
                             <Text style={styles.provider}>Kaiser Permanente</Text>
-                            <Text note>Bill</Text>
-
+                            <Text note style={{ fontSize: 11 }}>Bill</Text>
                         </Body>
-                        <Right>
+                        <View style={{ paddingLeft: 33 }}>
                             <Text style={styles.amount}>$500</Text>
-                            <Text note style={styles.payText}>Pay Now</Text>
-                        </Right>
+                            <Text style={styles.payText}>Pay Now</Text>
+                        </View>
                     </ListItem>
                 </List>
-
             </StyleProvider>)
     }
 }
@@ -40,7 +38,6 @@ const styles = StyleSheet.create({
         height: 16,
         width: 83.3,
         color: '#000000',
-
         fontSize: 12,
         letterSpacing: 0.47,
         lineHeight: 16
@@ -49,7 +46,7 @@ const styles = StyleSheet.create({
         height: 20,
         width: 60,
         color: '#000000',
-
+        //fontFamily: "Roboto Medium"; 
         fontSize: 15,
         letterSpacing: 1.06,
         lineHeight: 20,
@@ -60,19 +57,19 @@ const styles = StyleSheet.create({
         height: 16,
         width: 128,
         color: '#000000',
-
         fontSize: 12,
         letterSpacing: 0.47,
         lineHeight: 16
     },
     payText: {
-        height: 13,
-        width: 47,
+        height: 15,
+        opacity: 0.4,
         color: '#000000',
-
+        // fontFamily: Roboto;
         fontSize: 11,
-        letterSpacing: 0.52,
-        lineHeight: 13,
-        textAlign: 'right'
+        letterSpacing: 1.02,
+        lineHeight: 15,
+        textAlign: 'right',
+        textDecorationLine: 'underline'
     }
 });

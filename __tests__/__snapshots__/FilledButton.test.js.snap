@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "flex-start",
+      "backgroundColor": "#FFA400",
+      "borderBottomWidth": null,
+      "borderColor": "#3F51B5",
+      "borderLeftWidth": null,
+      "borderRadius": 18,
+      "borderRightWidth": null,
+      "borderTopWidth": null,
+      "borderWidth": undefined,
+      "elevation": 2,
+      "flexDirection": "row",
+      "height": 36,
+      "justifyContent": "space-between",
+      "opacity": 1,
+      "paddingBottom": 6,
+      "paddingTop": 6,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.2,
+      "shadowRadius": 1.2,
+      "width": 91,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#fff",
+          "fontFamily": "Roboto",
+          "fontSize": 14,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        },
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 12,
+          "height": 18,
+          "letterSpacing": 0.47,
+          "lineHeight": 16,
+        },
+      ]
+    }
+    uppercase={false}
+  >
+    Pay Now
+  </Text>
+</View>
+`;

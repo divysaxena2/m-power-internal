@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  closeOnRowBeginSwipe={false}
+  closeOnRowPress={true}
+  closeOnScroll={true}
+  directionalDistanceChangeThreshold={2}
+  disableLeftSwipe={false}
+  disableRightSwipe={false}
+  leftOpenValue={0}
+  previewFirstRow={false}
+  recalculateHiddenLayout={false}
+  rightOpenValue={0}
+  style={Object {}}
+  swipeToOpenPercent={50}
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderBottomWidth": 0.5,
+          "borderColor": "#fff",
+          "flexDirection": "row",
+          "marginLeft": 18,
+          "paddingBottom": 15,
+          "paddingRight": 18,
+          "paddingTop": 15,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 26,
+            "width": 24.14,
+          }
+        }
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "alignSelf": "center",
+              "color": "#000",
+              "fontFamily": "Roboto",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#737373",
+              "fontSize": 15,
+              "letterSpacing": 1.06,
+              "lineHeight": 20,
+              "paddingLeft": 15.14,
+            },
+          ]
+        }
+        uppercase={false}
+      />
+    </View>
+  </View>
+</View>
+`;

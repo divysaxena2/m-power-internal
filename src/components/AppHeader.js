@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import getTheme from '../../native-base-theme/components';
 import material from '../../native-base-theme/variables/material';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 import { Button, StyleProvider, Input, Header, Icon, Right, Left, Body, InputGroup } from 'native-base';
 
 
@@ -10,32 +10,43 @@ export default class AppHeader extends Component<Props> {
     render() {
         return (
             <StyleProvider style={getTheme(material)}>
-                <Header>
-                    <Left>
+                <Header style={{ paddingTop: 43.12, paddingBottom: 14.39 }} >
+                    <View>
                         <Button transparent>
-                            <Icon name="ios-contact" style={{ color: 'black', fontSize: 30 }} />
+                            <Icon name="ios-contact" style={{ color: '#fff', fontSize: 27 }} />
                         </Button>
-                    </Left>
-                    <Body style={{
-                        height: 38
-                    }}>
-                        <Input placeholder="Tell me what you want to do?" style={styles.searchBar} />
-                    </Body>
-                    <Right>
+                    </View>
+                    <View style={styles.searchSection}>
+                        <Input placeholder="Tell me what you want to do?" placeholderTextColor="#fff" style={styles.searchBar} />
+                        <Icon name="ios-search" style={styles.searchIcon} />
+                    </View>
+                    <View style={{ paddingLeft: 10.49, paddingRight: 10 }}>
                         <Button transparent>
-                            <Icon name="ios-qr-scanner" style={{ fontSize: 30, color: 'black' }} />
+                            <Image source={require('../assets/scanner.png')} />
                         </Button>
-                    </Right>
+                    </View>
                 </Header>
             </StyleProvider>)
     }
 }
 const styles = StyleSheet.create({
+    searchSection: {
+        width: 272.51,
+        height: 38,
+        flexDirection: 'row',
+        backgroundColor: '#015BA8',
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     searchBar: {
         color: '#fff',
-        width: 272.51,
-        borderWidth: 0.5,
-        borderColor: '#015BA8',
-        borderRadius: 5
+    },
+    searchIcon: {
+        color: '#fff',
+        fontSize: 12.5,
+        paddingRight: 14.84,
+        paddingLeft: 5.47
+
     }
 });

@@ -15,12 +15,16 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "setupTestFrameworkScriptFile": "m-power/jest/setup.js"
+    "setupFilesAfterEnv": [
+      "/home/zadmin/m-power/jest/setup.js"
+    ]
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
+    "jest-cli": "^24.8.0",
+    "jest-expo": "^32.0.1",
     "react-dom": "^16.8.6"
   },
   "private": true

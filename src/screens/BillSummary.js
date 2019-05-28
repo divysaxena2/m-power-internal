@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Visew } from 'react-native';
 import getTheme from '../../native-base-theme/components';
 import material from '../../native-base-theme/variables/material';
-import AppHeader from '../../src/components/AppHeader';
-import AppFooter from '../../src/components/AppFooter';
+import AppHeader from '../components/AppHeader';
+import AppFooter from '../components/AppFooter';
 import { StyleProvider, Container, Content } from 'native-base';
-import AppList from '../../src/components/AppList';
-import SummaryCard from '../../src/components/SummaryCard'
+import AppList from '../components/AppList';
+
+
 // At the top of your file
 
 
@@ -30,7 +31,6 @@ export default class BillSummary extends Component<Props> {
                 <Container>
                     <AppHeader />
                     <Content>
-                        <SummaryCard />
                         <AppList />
                         <AppList />
                         <AppList />

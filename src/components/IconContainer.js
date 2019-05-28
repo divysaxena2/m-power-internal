@@ -1,34 +1,42 @@
 import React, { Component } from 'react';
 import getTheme from '../../native-base-theme/components'
 import material from '../../native-base-theme/variables/material';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 import { Button, StyleProvider, Icon, Footer, Text, FooterTab } from 'native-base';
 
 type Props = {};
-export default class AppHeader extends Component<Props> {
+export default class IconContainer extends Component<Props> {
     render() {
         return (
             <StyleProvider style={getTheme(material)}>
                 <View style={styles.container} >
-                    <Icon style={styles.iconImage} name={this.props.iconName} />
-                    <Text style={styles.iconTitle}>{this.props.text}</Text>
+                    <View style={{ paddingLeft: 10 }}>
+                        <Image source={require('../assets/ribbon.png')} style={styles.img} />
+                    </View>
+                    <View>
+                        <Text style={styles.iconTitle}>{this.props.text}</Text>
+                    </View>
                 </View>
-            </StyleProvider>)
+            </StyleProvider >)
     }
 }
 const styles = StyleSheet.create({
     container: {
-        paddingLeft: 25
+        height: 110,
+        width: 80,
+        paddingLeft: 20
     },
     iconTitle: {
-        height: 41,
-        width: 60.2,
-        textAlign: 'center',
-        fontSize: 14,
-        lineHeight: 19
+        color: '#000000',
+        //font- family: Roboto;
+        fontSize: 13,
+        letterSpacing: 0.62,
+        lineHeight: 18,
+        textAlign: 'center'
     },
-    iconImage: {
-        paddingLeft: 10
+    img: {
+        height: 40,
+        width: 34
     }
 
 });

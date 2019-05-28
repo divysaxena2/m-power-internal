@@ -150,7 +150,7 @@ export default {
   // Header
   toolbarBtnColor: "#fff",
   toolbarDefaultBg: "#004987",
-  toolbarHeight: 84,
+  toolbarHeight: 91,
   toolbarSearchIconSize: 23,
   toolbarInputColor: "#fff",
   searchBarHeight: platform === "ios" ? 30 : 40,
@@ -196,7 +196,7 @@ export default {
 
   // List
   listBg: "transparent",
-  listBorderColor: "#c9c9c9",
+  listBorderColor: "#fff",
   listDividerBg: "#f4f4f4",
   listBtnUnderlayColor: "#DDD",
   listItemPadding: 12,
@@ -229,15 +229,16 @@ export default {
   inverseSpinnerColor: "#1A191B",
 
   // Tab
-  tabDefaultBg: "#3F51B5",
-  topTabBarTextColor: "#b3c7f9",
-  topTabBarActiveTextColor: "#fff",
-  topTabBarBorderColor: "#fff",
-  topTabBarActiveBorderColor: "#fff",
+  tabDefaultBg: "#FEFFFF",
+  topTabBarTextColor: "#000000",
+  topTabBarActiveTextColor: "#003A64",
+  topTabBarBorderColor: "#004987",
+  topTabBarActiveBorderColor: "#004987",
 
   // Tabs
-  tabBgColor: "#F8F8F8",
-  tabFontSize: 15,
+  tabBgColor: "#FEFFFF",
+  tabFontSize: 13,
+
 
   // Text
   textColor: "#000",

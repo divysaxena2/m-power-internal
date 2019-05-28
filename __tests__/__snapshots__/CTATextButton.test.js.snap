@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#000",
+        "fontFamily": "Roboto",
+        "fontSize": 16,
+      },
+      Object {
+        "color": "#F7B500",
+        "fontSize": 13,
+        "height": 18,
+        "letterSpacing": 0.62,
+        "lineHeight": 18,
+        "opacity": 0.54,
+        "paddingLeft": 39,
+        "textAlign": "center",
+        "textDecorationLine": "underline",
+      },
+    ]
+  }
+  uppercase={false}
+>
+  View More
+</Text>
+`;

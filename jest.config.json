@@ -1,15 +1,15 @@
 {
-    "preset": "react-native",
+    "preset": "jest-expo",
     "collectCoverage": true,
     "moduleDirectories": [
         "node_modules",
         "src"
     ],
     "transform": {
-        "^.+\\.js$": "m-power/node_modules/react-native/jest/preprocessor.js"
+        "^.+\\.js$": "/home/zadmin/m-power/node_modules/react-native/jest/preprocessor.js"
     },
     "setupFiles": [
-        "m-power/jest/setup.js"
+        "/home/zadmin/m-power/jest/setup.js"
     ],
     "transformIgnorePatterns": [
         "node_modules/(?!(jest-)?react-native)"
