@@ -5,16 +5,14 @@ import { StyleSheet, View } from 'react-native';
 import { StyleProvider, Button, Text } from 'native-base';
 
 
-type Props = {};
-export default class CTATextButton extends Component<Props> {
 
-    render() {
-        return (
-            <StyleProvider style={getTheme(material)}>
-                <Text style={styles.buttonText}>View More</Text>
-            </StyleProvider>)
-    }
+export default (props) => {
+    return (
+        <StyleProvider style={getTheme(material)}>
+            <Text style={styles.buttonText}>{props.title}</Text>
+        </StyleProvider>)
 }
+
 const styles = StyleSheet.create({
 
     buttonText: {

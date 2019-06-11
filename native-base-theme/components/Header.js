@@ -10,9 +10,7 @@ export default (variables /*: * */ = variable) => {
 
   const headerTheme = {
     ".span": {
-      height: 84,
-      width: 375,
-      backgroundColor: 'red',
+      height: 128,
       "NativeBase.Left": {
         alignSelf: "flex-start"
       },

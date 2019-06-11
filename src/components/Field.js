@@ -4,22 +4,20 @@ import material from '../../native-base-theme/variables/material';
 import { StyleSheet, View } from 'react-native';
 import { StyleProvider, Form, Item, Label, Input } from 'native-base';
 
-
-type Props = {};
-export default class Field extends Component<Props> {
-
-    render() {
-        return (
-            <StyleProvider style={getTheme(material)}>
-                <Form>
-                    <Item floatingLabel>
-                        <Label>{this.props.label}</Label>
-                        <Input />
-                    </Item>
-                </Form>
-            </StyleProvider>)
-    }
+export default (props) => {
+    return (
+        <StyleProvider style={getTheme(material)}>
+            <Form style={{ width: 343 }}>
+                <Item stackedLabel style={styles.input}>
+                    <Label>{props.label}</Label>
+                    <Input />
+                </Item>
+            </Form>
+        </StyleProvider>)
 }
-const styles = StyleSheet.create({
 
+const styles = StyleSheet.create({
+    input: {
+        borderBottomColor: '#f5f4f8'
+    }
 });

@@ -4,39 +4,55 @@ import material from '../../native-base-theme/variables/material';
 import { StyleSheet, View, Image } from 'react-native';
 import { Button, StyleProvider, Icon, Footer, Text, FooterTab } from 'native-base';
 
-type Props = {};
-export default class IconContainer extends Component<Props> {
-    render() {
-        return (
-            <StyleProvider style={getTheme(material)}>
-                <View style={styles.container} >
-                    <View style={{ paddingLeft: 10 }}>
-                        <Image source={require('../assets/ribbon.png')} style={styles.img} />
-                    </View>
-                    <View>
-                        <Text style={styles.iconTitle}>{this.props.text}</Text>
-                    </View>
+
+export default (props) => {
+    return (
+        <StyleProvider style={getTheme(material)}>
+            <View style={styles.container} >
+                <View style={styles.backgroundContainer}>
+                    <Image source={props.bgSource} />
                 </View>
-            </StyleProvider >)
-    }
+                <View style={styles.overlayImage}>
+                    <Image source={props.imgSource} />
+                </View>
+                {/* <View>
+                        <Text style={styles.iconTitle}>{props.text}</Text>
+                    </View> */}
+            </View>
+        </StyleProvider >)
 }
+
 const styles = StyleSheet.create({
+    backgroundContainer: {
+        position: 'absolute',
+        //top: 0,
+        //bottom: 0,
+        //left: 0,
+        //right: 0,
+    },
     container: {
-        height: 110,
-        width: 80,
-        paddingLeft: 20
+        flex: 1,
+        alignItems: 'center',
     },
-    iconTitle: {
-        color: '#000000',
-        //font- family: Roboto;
-        fontSize: 13,
-        letterSpacing: 0.62,
-        lineHeight: 18,
-        textAlign: 'center'
+    overlayImage: {
+
     },
-    img: {
-        height: 40,
-        width: 34
-    }
+    // container: {
+    //     height: 110,
+    //     width: 80,
+    //     paddingLeft: 20
+    // },
+    // iconTitle: {
+    //     color: '#000000',
+    //     //font- family: Roboto;
+    //     fontSize: 13,
+    //     letterSpacing: 0.62,
+    //     lineHeight: 18,
+    //     textAlign: 'center'
+    // },
+    // img: {
+    //     height: 40,
+    //     width: 34
+    // }
 
 });

@@ -199,7 +199,7 @@ export default {
   listBorderColor: "#fff",
   listDividerBg: "#f4f4f4",
   listBtnUnderlayColor: "#DDD",
-  listItemPadding: 12,
+  listItemPadding: 1,
   listNoteColor: "#808080",
   listNoteSize: 13,
   listItemSelected: "#3F51B5",

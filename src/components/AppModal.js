@@ -25,29 +25,17 @@ export default class AppModal extends Component {
                     <View style={styles.modalContainer}>
                         <View style={styles.innerContainer}>
                             <Image source={require('../assets/paymentSuccess.png')} />
-                            <Text>Payment Successful!</Text>
-                            <Text>Your Bill Details</Text>
-                            <List>
-                                <ListItem>
-                                    <Text style={{ textAlign: 'right' }}>Provider Name</Text>
-                                    <Text style={{ paddingLeft: 29 }}>El Camino Hospital</Text>
-                                </ListItem>
-                                <ListItem>
-                                    <Text style={{ textAlign: 'left' }}>Amount</Text>
-                                    <Text style={{ paddingLeft: 29 }}>$500</Text>
-                                </ListItem>
-                                <ListItem>
-                                    <Text style={{ textAlign: 'right' }}>Payment Method</Text>
-                                    <Text style={{ paddingLeft: 29 }}>Credit card ending 3924</Text>
-                                </ListItem>
-                            </List>
-                            <View>
-                                <Text>Congrats!You have earned 445 MPowered Points!</Text>
-                            </View>
+                            <Text style={styles.successText}>Payment Successful</Text>
+                            <Text>Confirmation Number</Text>
+                            <Text>ABCDERUY21113</Text>
                             <Button
                                 onPress={() => this.closeModal()}
                                 title="Go to Bill Summary">
                             </Button>
+                            <View>
+                                <Text>Congrats!You have earned 445 MPowered Points!</Text>
+                            </View>
+
                         </View>
                     </View>
                 </Modal>
@@ -67,10 +55,18 @@ const styles = StyleSheet.create({
     },
     modalContainer: {
         flex: 1,
+
         justifyContent: 'center',
-        backgroundColor: 'white',
+
     },
     innerContainer: {
         alignItems: 'center',
     },
+    successText: {
+        color: '#000000',
+        fontSize: 17,
+        letterSpacing: 1.2,
+        lineHeight: 22,
+        textAlign: 'center'
+    }
 });

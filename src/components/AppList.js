@@ -5,30 +5,28 @@ import { StyleSheet, View } from 'react-native';
 import { StyleProvider, List, ListItem, Left, Right, Body, Text } from 'native-base';
 
 
-type Props = {};
-export default class AppList extends Component<Props> {
 
-    render() {
-        return (
-            <StyleProvider style={getTheme(material)}>
-                <List>
-                    <ListItem style={styles.listItem}>
-                        <View style={{ paddingLeft: 15 }}>
-                            <Text style={styles.date}>5 May,2019</Text>
-                        </View>
-                        <Body style={{ paddingLeft: 20 }}>
-                            <Text style={styles.provider}>Kaiser Permanente</Text>
-                            <Text note style={{ fontSize: 11 }}>Bill</Text>
-                        </Body>
-                        <View style={{ paddingLeft: 33 }}>
-                            <Text style={styles.amount}>$500</Text>
-                            <Text style={styles.payText}>Pay Now</Text>
-                        </View>
-                    </ListItem>
-                </List>
-            </StyleProvider>)
-    }
+export default (props) => {
+    return (
+        <StyleProvider style={getTheme(material)}>
+            <List>
+                <ListItem style={styles.listItem}>
+                    <View style={{ paddingLeft: 15 }}>
+                        <Text style={styles.date}>5 May,2019</Text>
+                    </View>
+                    <Body style={{ paddingLeft: 20 }}>
+                        <Text style={styles.provider}>Kaiser Permanente</Text>
+                        <Text note style={{ fontSize: 11 }}>Bill</Text>
+                    </Body>
+                    <View style={{ paddingLeft: 33 }}>
+                        <Text style={styles.amount}>$500</Text>
+                        <Text style={styles.payText}>Pay Now</Text>
+                    </View>
+                </ListItem>
+            </List>
+        </StyleProvider>)
 }
+
 const styles = StyleSheet.create({
     listItem: {
         height: 56,

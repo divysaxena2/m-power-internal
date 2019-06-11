@@ -4,34 +4,37 @@ import material from '../../native-base-theme/variables/material';
 import { Image, StyleSheet } from 'react-native';
 import { Button, StyleProvider, Icon, Footer, Text, FooterTab } from 'native-base';
 
-type Props = {};
-export default class AppFooter extends Component<Props> {
-    render() {
-        return (
-            <StyleProvider style={getTheme(material)}>
-                <Footer>
-                    <FooterTab>
-                        <Button>
-                            <Image source={require('../assets/ribbon.png')} style={{ height: 34, width: 38 }} />
-                            <Text uppercase={false} style={styles.captions}>Home</Text>
-                        </Button>
-                        <Button>
-                            <Image source={require('../assets/ribbon.png')} style={{ height: 34, width: 38 }} />
-                            <Text uppercase={false} style={styles.captions}>Services</Text>
-                        </Button>
-                        <Button>
-                            <Image source={require('../assets/ribbon.png')} style={{ height: 34, width: 38 }} />
-                            <Text uppercase={false} style={styles.captions}>Circles</Text>
-                        </Button>
-                        <Button >
-                            <Image source={require('../assets/ribbon.png')} style={{ height: 34, width: 38 }} />
-                            <Text uppercase={false} style={styles.captions}>Utilities</Text>
-                        </Button>
-                    </FooterTab>
-                </Footer>
-            </StyleProvider>)
-    }
+
+export default (props) => {
+    return (
+        <StyleProvider style={getTheme(material)}>
+            <Footer>
+                <FooterTab>
+                    <Button>
+                        {props.activeState === 0 ?
+                            <Image source={require('../assets/home.png')} style={{ height: 34, width: 38 }} /> : <Image source={require('../assets/home_gray.png')} style={{ height: 34, width: 38 }} />}
+                        <Text uppercase={false} style={styles.captions}>Home</Text>
+                    </Button>
+                    <Button>
+                        {props.activeState === 1 ?
+                            <Image source={require('../assets/services.png')} style={{ height: 30, width: 38 }} /> : <Image source={require('../assets/services_gray.png')} style={{ height: 30, width: 38 }} />}
+                        <Text uppercase={false} style={styles.captions}>Services</Text>
+                    </Button>
+                    <Button>
+                        {props.activeState === 2 ?
+                            <Image source={require('../assets/circles.png')} style={{ height: 34, width: 38 }} /> : <Image source={require('../assets/circles_gray.png')} style={{ height: 24, width: 24 }} />}
+                        <Text uppercase={false} style={styles.captions}>Circles</Text>
+                    </Button>
+                    <Button >
+                        {props.activeState === 3 ?
+                            <Image source={require('../assets/utilities.png')} style={{ height: 34, width: 38 }} /> : <Image source={require('../assets/utilities_gray.png')} style={{ height: 24, width: 24 }} />}
+                        <Text uppercase={false} style={styles.captions}>Utilities</Text>
+                    </Button>
+                </FooterTab>
+            </Footer>
+        </StyleProvider>)
 }
+
 const styles = StyleSheet.create({
     captions: {
         color: '#003A64',
